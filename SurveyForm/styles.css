@@ -1,0 +1,114 @@
+body {
+  background-image: url(https://images.unsplash.com/photo-1523766775147-152d0d6e2adb?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+  font-family: Aclonica;
+  font-size: 20px;
+}
+
+#title {
+  color: black;
+}
+
+div {
+  width: 800px;
+  padding: 25px;
+  border: 5px solid black;
+  margin: 10px auto;
+  background: #c6ffdd;
+  background: -webkit-linear-gradient(to right, #f7797d, #fbd786, #c6ffdd);
+  background: linear-gradient(to right, #f7797d, #fbd786, #c6ffdd);
+}
+
+h1,
+p {
+  margin: 5px auto;
+  text-align: center;
+}
+
+#description {
+  font-size: 18px;
+  text-align: center;
+}
+
+form {
+  width: 100vw;
+  max-width: 700px;
+  min-width: 500px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid black;
+}
+
+input::placeholder {
+  color: grey;
+  font-family: Aclonica;
+  font-size: 13px;
+}
+
+#dropdown,
+#comment {
+  color: grey;
+  font-family: Aclonica;
+  font-size: 13px;
+}
+
+#funProposal,
+#favourite,
+#submit {
+  font-size: 18px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+input,
+textarea {
+  background-color: white;
+  border: 1px solid #0a0a23;
+  color: black;
+}
+
+#question1 {
+  color: black;
+  font-size: 18px;
+  text-align: center;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+  display: inline;
+}
+
+button {
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 15px;
+  font-family: Aclonica;
+  background-color: rgb(194, 145, 12);
+  border-radius: 25%;
+}
+
+a {
+  color: #dfdfe2;
+}

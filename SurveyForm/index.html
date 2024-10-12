@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Fitness and Wellness Habits Survey</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    </head>
+  <body>
+    <div>
+    <h1 id="title">Fitness and Wellness Habits Survey</h1>
+    <p id="description">Let's find out the way the get you back into fitness</p>
+    <form id="survey-form">
+      <fieldset>
+      <label id="name-label">Name: <input method="post" id="name" type="text" placeholder="Insert your full name here" required/></label>
+      <label id="email-label">Email: <input id="email" type="email" placeholder="Insert you email address here" required/></label>
+      <label id="number-label">Age: <input id="number" type="number" name="age" min="13" max="120" placeholder="Insert your age here"/>
+      </fieldset>
+      <fieldset>
+        <p id="question1">How often do you exercise?</p>
+      <select id="dropdown">
+        
+        <option value="">Please select one of the following</option>
+        <option value="1">Once per week</option>
+        <option value="2">2 times per week</option>
+        <option value="3">3 times per week</option>
+        <option value="4">4 times or more</option>
+        <option value="5">Never</option>
+        </select>
+        </fieldset>
+       <br>
+        <fieldset>
+          <legend id="favourite">
+           What is your favourite exercise? 
+          </legend>
+          <label for="cardio">
+            <input id="cardio" type="radio" name="exerciseType" class="inline" value="cardio" checked/>Cardio
+          </label>
+          <label for="weights">
+            <input id="weights" type="radio" name="exerciseType" class="inline" value="weights"/>Lifting Weights
+          </label>
+          <label for="running">
+            <input id="running" type="radio" name="exerciseType" class="inline" value="running"/>Running
+          </label>
+        </fieldset>
+       <fieldset>
+        <p id="funProposal">To make exercise fun, we want to propose activities that are different from the usual gym, so you can also have some fun while exercising. What kind of sport would you like to try?</p>
+        <label for="aerial-silks">Aerial Silks
+        <input
+          class="inline"
+          id="aerial-silks"
+          type="checkbox"
+          name="activities"
+          value="a"
+        />
+        <label for="trapeze">Trapeze
+        <input
+          class="inline"
+          id="trapeze"
+          type="checkbox"
+          
+          name="activities"
+          value="b"
+        />
+        <label for="Pole Dance">Pole Dance
+        <input
+          class="inline"
+          id="pole-dance"
+          type="checkbox"
+        
+          name="activities"
+          value="c"
+        />
+        <label for="aerial-hoop">Aerial Hoop
+        <input
+          class="inline"
+          id="aerial-hoop"
+          type="checkbox"
+          
+          name="activities"
+          value="d"
+        />
+        <label for="acro-yoga">Acro Yoga
+        <input
+          class="inline"
+          id="acro-yoga"
+          type="checkbox"
+         
+          name="activities"
+          value="e"
+        />
+        <label for="parkour">Parkour
+        <input
+          class="inline"
+          id="parkour"
+          type="checkbox"
+          
+          name="activities"
+          value="f"
+        />
+        <label for="capoeira">Capoeira
+        <input
+          class="inline"
+          id="capoeira"
+          type="checkbox"
+         
+          name="activities"
+          value="g"
+        />
+      </fieldset>
+        <label for="comment"
+          >Additional comments:
+          <textarea
+            id="comment"
+            name="comment"
+            rows="3"
+            cols="30"
+            placeholder="I would also love to try..."
+          ></textarea>
+        </label>
+        <button id="submit">Submit</button>
+      </form>
+      </div>
+  </body>
+</html>
