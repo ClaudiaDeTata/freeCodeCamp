@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Responsive Web Design Documentation</title>
+  </head>
+
+  <body>
+    <main id="main-doc">
+      <!-- navbar -->
+      <div id="navbar-div">
+        <nav id="navbar">
+          <header id="header-one">Responsive Web Design</header>
+          <ul class="ul-list-index">
+            <li class="nav-list-item">
+              <a class="nav-link" href="#responsive_web_design">Responsive web design</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="nav-link" href="#setting_the_viewport">Setting the viewport</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="nav-link" href="#responsive_images">Responsive Images</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="nav-link" href="#responsive_typography">Responsive Typography</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="nav-link" href="#media_queries">Media Queries</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="nav-link" href="#responsive_layout_css_technologies">Responsive Layout CSS technologies</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id="text-div">
+        <section class="main-section" id="responsive_web_design">
+          <header class="sub-header">Responsive web design</header>
+          <p>Responsive web-design is an approach to web design that allows us to create functional websites for all kind of devices. Before this became the standard way of making websites, we referred to it as mobile-friendly design or mobile web development, but the goal is exacty the same: making sure our websites will work exactly the same way, on our mobile and on our laptop.
+          </p>
+          <p>Nowadays, with plenty of different sizes devices, we need to design websites that properly work on every kind of common screen, plus many unkowns, so it is obvious that we need a more generalized and standard way to do this.</p>
+        </section>
+
+        <section class="main-section" id="setting_the_viewport">
+          <header class="sub-header">Setting the viewport</header>
+          <p>The viewport meta tag defines for mobile browsers that the width of the viewport should be set to the device width.</p>
+          <pre>
+          <code>
+            &lt;meta name="viewport"&gt;
+          </code>
+        </pre>
+          <p>This was not working though, as it would show a zoomed-out version of the desktop layout and users would need to zoom in, but it looked untidy. This is why we use content, as we override a mobile device's default, with the actual width of the device. For this reason, bth these tags should always be included in the head of the document.
+          </p>
+          <pre>
+          <code>
+            &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
+          </code>
+        </pre>
+
+        </section>
+
+        <section class="main-section" id="responsive_images">
+          <header class="sub-header">Responsive Images</header>
+          <ul>
+            <li class="paragraph-list">Width property</li>
+            <p>Using the width property and setting it to 100% will render a responsive image and scale it up and down.</p>
+            <pre><code>&lt;img src="img_girl.jpg" style="width:100%;"&gt;</code></pre>
+            <li class="paragraph-list">Max-width property</li>
+            <p>A better solution is using max-width, set to 100%. In this case the image will scale down if needed, but it will never scale up to a larger size than its original one.</p>
+            <pre><code>&lt;img src="img_girl.jpg" style="max-width:100%;height:auto;"&gt;</code></pre>
+            <li class="paragraph-list">Picture/image tag</li>
+            <p>The
+              <code>picture
+              </code>tag allows to define different images for different browser windows sizes.
+            </p>
+            <pre><code>&lt;img src="img_girl.jpg" style="max-width:100%;height:auto;"&gt;</code></pre>
+            <p>It is infact an element that contains several
+              <code>source
+              </code>
+              elements, providing different sources for the browser to choose from, followed by the
+              <code>img
+              </code>
+              element.</p>
+            <pre>
+                <code>
+                &lt;picture&gt;
+                  &lt;source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg" /&gt;
+                  &lt;source media="(min-width: 800px)" srcset="elva-800w.jpg" /&gt;
+                  &lt;img src="elva-800w.jpg" alt="chris standing up holding his daughter elva" /&gt;
+                &lt;/picture&gt;
+                </code>
+                </pre>
+            <p>The
+              <code>source
+              </code>elements include a
+              <code>media</code>
+              attribute that contains a condition: if the first one returns true, the first
+              <code>source</code>
+              element's image will be displayed, otherwise it will be the second one.</p>
+            <p>The
+              <code>srcset</code>
+              attributes contain the path to the image to display.</p>
+            <p>In any case, after the
+              <code>picture</code>
+              element, an
+              <code>img</code>
+              element must be provided, together with
+              <code>
+                src</code>
+              and
+              <code>alt</code>, to make sure the image appears whenever none of the default cases apply.</p>
+          </ul>
+        </section>
+
+        <section class="main-section" id="responsive_typography">
+          <header class="sub-header">Responsive typography</header>
+          <p>The text size can also be set with a
+            <code>vw</code>
+            unit: the viewport width. This way the text will take the size of the browser window.</p>
+          <pre><code>&lt;h1 style="font-size:10vw"&gt;hello world&lt;/h1&gt;</code></pre>
+          <p>Viewport is the browser window size. 1vw = 1% of viewport width.</p>
+        </section>
+
+        <section class="main-section" id="media_queries">
+          <header class="sub-header">Media queries</header>
+          <p>Media queries allow us to run tests to check whether the user's screen is greater than a certain width or resolution, and apply CSS in a selective way, so to style the page according to the user's needs.</p>
+          <pre><code>@media screen and (min-width: 80rem) {
+            .container {
+              margin: 1em 2em;
+            }
+          }
+          </code></pre>
+          <p>In this specific case, the media query has two conditions and will only apply the CSS styling if the web page is displayed as screen media (so not a printed document) and if the viewport is at least
+            <code>80rem</code>
+            wide. Multiple media queries can be added within a stylesheet and the points at which the query is introduced, are known as breakpoints.
+          </p>
+        </section>
+
+        <section class="main-section" id="responsive_layout_css_technologies">
+          <header class="sub-header">Responsive Layout CSS technologies</header>
+
+          <ul>
+
+            <li class="paragraph-list">Multicol</li>
+            <p>Using multicol, we can specify a
+              <code>column-count</code>
+              that will indicate the maximum number of columns our content will be split into. Thw size of the columns will change according to the screen size.</p>
+            <pre><code>.container {
+              column-count: 3;
+            }</code></pre>
+            <p>When specifying a
+              <code>column-width</code>
+              we specify a minimum width, so as many columns of the chosen widths fit into the container will be created, adapting to the available space.</p>
+            <pre><code>.container {
+              column-width: 10em;
+            }</code></pre>
+            <p>We can also use
+              <code>columns</code>
+              as shorthand property</p>
+
+            <li class="paragraph-list">Flexbox</li>
+            <p>When we use flexbox, the items will shrink or grow and the space will be distributed according to the space in the main container.</p>
+            <pre>
+              <code>.container {
+                  display: flex;
+                }
+                
+                .item {
+                  flex: 1;
+                }
+              </code>
+            </pre>
+            <p>In this example, every item will take an equal amount of space in the flex container.</p>
+
+            <li class="paragraph-list">Grids</li>
+            <p>With grids, we have a unit measure called
+              <code>fr</code>
+              which determines the distribution of the available space across grid tracks. In the case below for example, the container will have three column tracks, each one taking part of the available space in the main container.
+            </p>
+            <pre><code>.container {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+            }</code></pre>
+          </ul>
+          <p></p>
+          <p></p>
+          <code></code>
+        </section>
+      </div>
+    </div>
+
+  </main>
+</body>
+
+</html>
