@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- header -->
+    <div class="header-block">
+      <header id="header">
+        <div id="title-div">
+          <h1 id="header-title"><img id="header-img" src="/images/nav-icon.png" alt="A cute tabby cat playing.">Pawsome Whiskered Friends</h1>
+
+          <!-- navbar -->
+          <nav id="nav-bar">
+            <ul id="nav-list">
+              <li class="nav-element">
+                <a class="nav-link" href="#products">Products</a>
+              </li>
+              <li class="nav-element">
+                <a class="nav-link" href="#video">Testimonials</a>
+              </li>
+              <li class="nav-element">
+                <a class="nav-link" href="#contact-form">Contact us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <!-- products -->
+    <div id="products">
+      <div class="product-box"><img class="product-pic" src="/images/toy1.jpg" alt="Grey cat playing with a windmill toy.">
+        <h4 class="product-name">Windmill Cat Toy Interactive</h4>
+        <p class="product-description">A spinning toy designed to keep your cat engaged with its rotating blades and vibrant colors, offering hours of entertainment and mental stimulation.</p>
+        <p class="product-price">Price £ 30.99</p>
+        <button class="purchase-btn"><img class="logo-btn" src="/images/nav-icon.png">Buy</button>
+      </div>
+      <div class="product-box"><img class="product-pic" src="/images/toy2.jpg" alt="Tabby cat playing with a scratch turntable.">
+        <h4 class="product-name">Cat Scratch Turntable</h4>
+        <p class="product-description">A durable and fun scratcher designed like a turntable, satisfying your cat's scratching instincts while doubling as a playful surface.</p>
+        <p class="product-price">Price £ 27.99</p>
+        <button class="purchase-btn"><img class="logo-btn" src="/images/nav-icon.png">Buy</button>
+      </div>
+      <div class="product-box"><img class="product-pic" src="/images/toy3.jpg" alt="White and grey cat playing with an interactive peekaboo toy.">
+        <h4 class="product-name">Peekaboo Interactive Cat Toy</h4>
+        <p class="product-description">An engaging hide-and-seek toy with hidden compartments and moving parts, encouraging your cat’s natural hunting instincts.</p>
+        <p class="product-price">Price £ 32.99</p>
+        <button class="purchase-btn"><img class="logo-btn" src="/images/nav-icon.png">Buy</button>
+      </div>
+    </div>
+
+    <!-- video -->
+    <div id="video-container">
+      <h2 id="testimonials-title">Check our customers' review in the video below!</h2>
+      <iframe id="video" src="https://www.youtube.com/embed/KA1mbkU6das?si=eepoV_r4xPU5RQXq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe>
+    </div>
+
+    <!-- form -->
+    <div id="contact-form">
+      <h2 id="form-description">Add your details to receive news and info about our products!</h2>
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+        <label for="fname">First name</label><br>
+        <input type="text" id="fname" name="fname" class="input-form"><br>
+        <label for="lname">Last name</label><br>
+        <input type="text" id="lname" name="lname" class="input-form"><br>
+        <label for="email">Email address</label><br>
+        <input type="email" id="email" name="email" placeholder="ex CatElGato@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="input-form"><br><br>
+        <input type="submit" id="submit" value="Submit">
+      </form>
+    </div>
+
+    <!-- footer -->
+    <footer id=" footer">
+      <p>Claudia De Tata 2024 -
+        <a href="www.linkedin.com/in/claudia-detata" id="contact">Contact me!</a>
+      </p>
+      <a href=" https://www.flaticon.com/free-icons/paw" title="paw icons" id="credit">Paw icons created by Mihimihi - Flaticon</a>
+    </footer>
+  </body>
+
+</html>
