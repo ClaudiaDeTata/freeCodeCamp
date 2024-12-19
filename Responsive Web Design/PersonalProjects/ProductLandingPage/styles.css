@@ -5,7 +5,8 @@ body {
 .header-block{
   position: fixed;
   width: 100%;
-  top: 5px;
+  top: -55px;
+  left: -15px;
 }
 
 #header {
@@ -14,21 +15,39 @@ body {
   background-image: url("/images/nav-pic.jpg");
   background-size: cover;
   background-position: center;
+  max-height: 150px;
+  height: 150px;
+  position: relative;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 0px 15px; 
+  left: -30px;
+  top: -25px;
 }
 
 #title-div{
+  width: 100%; 
   text-align: center;
-  margin-bottom: 50px; 
   padding: 50px;
+  
 }
 
 #header-title{
-  margin-left: 700px;
-  margin-top: 100px;
-  font-size: 35px;
+  max-width: 100%; 
+  font-size: 2.5rem; 
   text-shadow: 3px 3px black;
-  font-weight: bolder;
+  font-weight: bold;
   color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 1px;
+  background: #F56495;
+  opacity: 1;
+  margin-left: -30px;
+  margin-top: 5px;
+  text-align: center; 
+  box-sizing: border-box;
 }  
 
 #header-img {
@@ -37,8 +56,9 @@ body {
   margin-bottom: -10px;
 }
 
-#nav-bar {
+#navbar {
   position: fixed;
+  font-size: 3rem;
 }
 
 #nav-list {
@@ -50,10 +70,9 @@ body {
 }
 
 .nav-element, .nav-link {
-  padding: 30px;
-  margin: -10px;
+  padding: 10px;
+  margin: 5px;
   list-style: none;
-  font-size: 35px;
   color: white;
   font-weight: bold;
   text-shadow: 3px 3px black;
@@ -65,7 +84,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 400px;
+  margin-top: 250px;
 }
 
 .product-box {
@@ -168,23 +187,24 @@ footer {
   color: black;
 }
 
+@media (max-width: 1041px){
+  .nav-element, .nav-link  {
+    font-size: 1.5rem;
+  } 
+}
+
+@media (max-width: 845px){
+  .nav-element, .nav-link  {
+    font-size: 1.5rem;
+  } 
+}
+
+
 @media (max-width: 768px) {
-  #title-div{
-    width: 80%;
-  }
-
-  #header-title{
-    margin-left: -50px;
-    font-size: 20px;
-  }
-
-  .nav-element, .nav-link {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-size: 20px; 
-    margin-left: -30px;
-  }
+  .nav-element, .nav-link  {
+    font-size: 1.5rem;
+    
+  } 
 
   #products {
     flex-direction: column;
